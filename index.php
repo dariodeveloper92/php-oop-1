@@ -27,7 +27,7 @@
             $this->producer = $_producer;
             $this->productionHouse = $_productionHouse;
         }
-        // metodo
+        // metodo: modifico $productionHouse
         function getProductionHouse()
         {
             return $this->productionHouse;
@@ -35,6 +35,15 @@
         function setProductionHouse($_productionHouse)
         {
             $this->productionHouse = $_productionHouse;
+        }
+        // metodo:inietto $language
+        function getLanguage()
+        {
+            return $this->language;
+        }
+        function setLanguage($_language)
+        {
+            $this->language = $_language;
         }
 
     }
@@ -48,9 +57,14 @@
     var_dump($myMovie_1);
     var_dump($myMovie_2);
 
-    //modifico la productionHouse in One Race Films
+    //modifico $productionHouse in "One Race Films"
     $myMovie_1->setProductionHouse('One Race Films');
-    //stampo la productionHouse modificata
-    echo $myMovie_1->getProductionHouse();
+    //stampo a schermo $productionHouse modificata
+    echo $myMovie_1->getProductionHouse(). '<br/>';
+    
+    //aggiungo $language
+    $myMovie_1->setLanguage(('English'));
+    //stampo a schermo $language
+    echo $myMovie_1->getLanguage();
     echo '<pre/>';
 ?>
